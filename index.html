@@ -22,10 +22,19 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  function delayedRedirect(){
+    window.location = "http://readthedocs.org/projects/django/downloads/"
+  }
   </script>
 </head>
 
-<body id="home-page">
+<body id="home-page" onLoad="setTimeout('delayedRedirect()', 10000)">
+
+  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; line-height: 75px; position: relative;'>
+      Please visit <a href="http://readthedocs.org/projects/django/downloads">Read the Docs</a> for the latest version.
+  </div>
+
   <div id="site-wrapper">
     <div class="container" id="header">
       <div id="logo">
